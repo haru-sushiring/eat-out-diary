@@ -18,6 +18,8 @@ function FormComp() {
       <p>行った日: {formData.date}</p>
       <p>評価: {formData.review}</p>
       <p>感想: {formData.text}</p>
+      <p>画像</p>
+      <img src={`${formData.image}`}/>
     </>
   );
 }

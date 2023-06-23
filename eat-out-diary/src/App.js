@@ -4,9 +4,13 @@ import TopPage from './components/TopPage';
 import FormPage from './components/FormPage';
 import FormComp from './components/FormComp';
 import ListPage from './components/ListPage';
+import LoginPage from './components/LoginPage';
+// import MyPage from './components/MyPage';
 
 import firebase from "firebase/app";
 import "firebase/auth";
+
+// import firebase from 'firebase/compat/app';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -23,7 +27,9 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_FIREBASE_Storage_Bucket,
   messagingSenderId: process.env.REACT_APP_FIREBASE_Messaging_Sender_ID,
   appId: process.env.REACT_APP_FIREBASE_App_Id,
-  measurementId: process.env.REACT_APP_FIREBASE_Measurement_ID
+  measurementId: process.env.REACT_APP_FIREBASE_Measurement_ID,
+  storageBucket:process.env.REACT_APP_FIREBASE_StorageBucket,
+  databaseURL:process.env.REACT_APP_FIREBASE_DatabaseURL
 };
 
 // Initialize Firebase
@@ -39,6 +45,8 @@ function App() {
         <Route path="form" element={<FormPage />} />
         <Route path="comp" element={<FormComp />} />
         <Route path="list" element={<ListPage />} />
+        <Route path="login" element={<LoginPage />} />
+        {/* <Route path="mypage" element={<MyPage />} /> */}
       </Routes>
     </BrowserRouter>
   );
